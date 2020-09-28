@@ -1,4 +1,4 @@
-package de.neuefische.students;
+package de.neuefische.students.model;
 
 public class Student {
 

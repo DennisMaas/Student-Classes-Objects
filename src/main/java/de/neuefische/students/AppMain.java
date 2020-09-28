@@ -1,5 +1,7 @@
 package de.neuefische.students;
 
+import de.neuefische.students.model.Student;
+
 public class AppMain {
 
     public static void main(String[] args) {
