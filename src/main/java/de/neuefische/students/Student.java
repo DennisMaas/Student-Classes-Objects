@@ -2,5 +2,32 @@ package de.neuefische.students;
 
 public class Student {
 
-    String name = "Jane Doe";
+    private String name = "Jane Doe";
+    private int age = 10;
+    private int immatriculationNumber = 6795678;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getImmatriculationNumber() {
+        return immatriculationNumber;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setImmatriculationNumber(int immatriculationNumber) {
+        this.immatriculationNumber = immatriculationNumber;
+    }
+
 }
