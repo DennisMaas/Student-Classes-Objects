@@ -1,10 +1,25 @@
 package de.neuefische.students.model;
 
+import java.util.Objects;
+
 public class Student {
 
     private String name;
-    private int age = 10;
     private int immatriculationNumber = 6795678;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Student student = (Student) o;
+        return immatriculationNumber == student.immatriculationNumber &&
+                Objects.equals(name, student.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, immatriculationNumber);
+    }
 
     public Student(String name){
         this.name = name;
@@ -14,9 +29,6 @@ public class Student {
         return name;
     }
 
-    public int getAge() {
-        return age;
-    }
 
     public int getImmatriculationNumber() {
         return immatriculationNumber;
@@ -24,10 +36,6 @@ public class Student {
 
     public void setName(String name){
         this.name = name;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public void setImmatriculationNumber(int immatriculationNumber) {
