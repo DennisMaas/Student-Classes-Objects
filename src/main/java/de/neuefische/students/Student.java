@@ -2,9 +2,13 @@ package de.neuefische.students;
 
 public class Student {
 
-    private String name = "Jane Doe";
+    private String name;
     private int age = 10;
     private int immatriculationNumber = 6795678;
+
+    public Student(String name){
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -19,7 +23,7 @@ public class Student {
     }
 
     public void setName(String name){
-        this.name=name;
+        this.name = name;
     }
 
     public void setAge(int age) {
