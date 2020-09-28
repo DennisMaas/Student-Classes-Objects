@@ -1,21 +1,17 @@
 package de.neuefische.students.model;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 
 class StudentTest {
 
     @Test
     void testEqualTrue() {
         //Given
-        Student student1 = new Student("Dennis");
-        Student student2 = new Student("Dennis");
-        student1.setImmatriculationNumber(123);
-        student2.setImmatriculationNumber(123);
+        Student student1 = new Student("Dennis", 123);
+        Student student2 = new Student("Dennis", 123);
 
         //When
         boolean studentsAreEqual = student1.equals(student2);
-
 
         //Then
         Assertions.assertTrue(studentsAreEqual);
@@ -25,10 +21,8 @@ class StudentTest {
     @Test
     void testEqualFalse() {
         //Given
-        Student student1 = new Student("Hans");
-        Student student2 = new Student("Dennis");
-        student1.setImmatriculationNumber(987);
-        student2.setImmatriculationNumber(123);
+        Student student1 = new Student("Hans", 123);
+        Student student2 = new Student("Dennis", 987);
 
         //When
         boolean studentsAreEqual = student1.equals(student2);
@@ -36,6 +30,16 @@ class StudentTest {
 
         //Then
         Assertions.assertFalse(studentsAreEqual);
+    }
+    @Test
+    void testToString(){
+        //Given
+        Student student1 = new Student("Jakob", 111);
 
+        //When
+        String studentString = student1.toString();
+
+        //Then
+        Assertions.assertEquals("Student{name='Jakob', studentID=111}", studentString);
     }
 }
