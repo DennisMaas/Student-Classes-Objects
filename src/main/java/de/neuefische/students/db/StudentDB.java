@@ -22,4 +22,11 @@ public class StudentDB {
                 '}';
     }
 
+    public Student randomStudent() {
+       double randomNumber = Math.random();
+       int randomIndex = (int)(randomNumber * studentArray.length);
+
+        return studentArray[randomIndex];
+    }
+
 }
