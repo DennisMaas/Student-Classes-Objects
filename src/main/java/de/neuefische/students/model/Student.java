@@ -7,6 +7,11 @@ public class Student {
     private String name;
     private int studentID = 6795678;
 
+    public Student(String name, int studentID){
+        this.name = name;
+        this.studentID = studentID;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -21,15 +26,17 @@ public class Student {
         return Objects.hash(name, studentID);
     }
 
-    public Student(String name, int studentID){
-        this.name = name;
-        this.studentID = studentID;
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", studentID=" + studentID +
+                '}';
     }
 
     public String getName() {
         return name;
     }
-
 
     public int getStudentID() {
         return studentID;
@@ -43,11 +50,4 @@ public class Student {
         this.studentID = studentID;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", studentID=" + studentID +
-                '}';
-    }
 }
