@@ -48,6 +48,15 @@ public class StudentDB {
          */
 
         //students = ArrayUtils.add(students,newStudent);
-        //ich kann die ArrayUtils hierfür nicht runterladen
+        //ich kann die ArrayUtils hierfür nicht runterladen‚
+    }
+
+    public void remove(){
+        Student[] newStudentsArray = new Student[students.length - 1];
+        for (int i = 0; i < students.length - 1; i++) {
+            newStudentsArray[i] = students[i];
+        }
+        students = newStudentsArray;
+
     }
 }
