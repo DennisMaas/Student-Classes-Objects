@@ -1,24 +1,17 @@
 package de.neuefische.students.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.Objects;
 
-public interface Student {
-    public String getSubject();
+@AllArgsConstructor
+@Data
+public abstract class Student {
+    private String name;
+    private int Id;
 
-    @Override
-    public boolean equals(Object o);
+    public abstract String getSubject();
 
-    @Override
-    public int hashCode();
-
-    public String getName();
-
-    public int getId();
-
-    public void setName(String name);
-
-    public void setId(int studentID);
-
-    @Override
-    public String toString();
+    public abstract int anzahlModule();
 }

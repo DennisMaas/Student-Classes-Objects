@@ -4,13 +4,17 @@ import de.neuefische.students.model.Student;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@AllArgsConstructor
-@Data
-public class StudentHistory implements Student {
-    private String name;
-    private int Id;
+public class StudentHistory extends Student {
+    public StudentHistory(String name, int Id) {
+        super(name, Id);
+    }
 
    public String getSubject() {
        return "History";
    }
+
+    @Override
+    public int anzahlModule() {
+        return 1;
+    }
 }

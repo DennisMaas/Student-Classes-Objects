@@ -4,14 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import de.neuefische.students.model.Student;
 
-@AllArgsConstructor
-@Data
-public class StudentComputerScience implements Student {
-    private String name;
-    private int Id;
+public class StudentComputerScience extends Student {
+    public StudentComputerScience(String name, int Id) {
+        super(name, Id);
+    }
 
     public String getSubject() {
         return "Computer Science";
     }
+
+    @Override
+    public int anzahlModule() {
+        return 1;
+    }
+
 
 }
