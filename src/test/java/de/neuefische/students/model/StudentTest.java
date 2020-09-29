@@ -7,8 +7,8 @@ class StudentTest {
     @Test
     void testEqualTrue() {
         //Given
-        Student student1 = new Student("Dennis", 123);
-        Student student2 = new Student("Dennis", 123);
+        Student student1 = new StudentHistory("Dennis", 123);
+        Student student2 = new StudentHistory("Dennis", 123);
 
         //When
         boolean studentsAreEqual = student1.equals(student2);
@@ -21,8 +21,8 @@ class StudentTest {
     @Test
     void testEqualFalse() {
         //Given
-        Student student1 = new Student("Hans", 123);
-        Student student2 = new Student("Dennis", 987);
+        Student student1 = new StudentComputerScience("Hans", 123);
+        Student student2 = new StudentHistory("Dennis", 987);
 
         //When
         boolean studentsAreEqual = student1.equals(student2);
@@ -34,7 +34,7 @@ class StudentTest {
     @Test
     void testToString(){
         //Given
-        Student student1 = new Student("Jakob", 111);
+        Student student1 = new StudentComputerScience("Jakob", 111);
 
         //When
         String studentString = student1.toString();
